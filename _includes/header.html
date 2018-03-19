@@ -1,0 +1,19 @@
+<header class="page-head {% if page.slug == 'home' %}-inset{% endif %}">
+	<div class="wrapper">
+		<div class="page-head__inner">
+			<a href="/" class="page-head__logo">
+				<img src="/assets/images/vitis-events.svg" alt="Vitis Events">
+			</a>
+			<ul class="main-menu">
+				{% assign pages_list = site.pages %}
+				{% assign group = 'navigation' %}
+				{% include pages_list %}
+			</ul>
+			<button type="button" class="main-menu__toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+		</div>
+	</div>
+</header>

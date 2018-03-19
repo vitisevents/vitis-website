@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">    
+    <title>{{ page.metatitle }}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+        
+    <!-- FAVICON AND APPLE TOUCH -->    
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-180x180.png">
+    <meta name="msapplication-TileImage" content="mstile.png">
+    <meta name="msapplication-TileColor" content="#f2484b">
+    <link rel="stylesheet" href="/assets/css/screen.css?version=1.0">
+    
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7C;Open+Sans:300,300i,400,400i,700,700i%7C;Playfair+Display:400,400i">
+</head>
+<body class="{{page.slug}}">
+    <div class="page-container">
+        {% include header.html %}
+        <div class="content-area">
+            {{content}}
+        </div>
+        {% include footer.html %}
+    </div>
+    <div class="mobile-nav">
+        <ul class="main-menu">
+            <a href="/" class="main-menu__logo">
+                <img src="/assets/images/vitis-events.svg" alt="Vitis Events">
+            </a>
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include pages_list %}
+        </ul>
+    </div>
+    {% include javascript.html %}
+    {% include analytics.html %}
+</body>
+</html>
