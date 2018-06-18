@@ -17,10 +17,6 @@
 		padding:100px 0;
 	}
 
-	span{
-		display:block;
-	}
-
 	h1,
 	h2{
 		@include font-family(secondary);
@@ -34,13 +30,5 @@
 		max-width:500px;
 		color:$color-white;
 		font-size:1.2rem;
-	}
-
-	.intro{
-		margin:20px 0;
-		@include font-size($base-font-size*1.2);
-		line-height:1.3em;
-		color:#000;
-		text-shadow:0 0 20px #fff, 1px 1px 0px #fff;
 	}
 }

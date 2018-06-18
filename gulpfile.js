@@ -1,12 +1,9 @@
 var gulp = require('gulp');
-var gutil = require('gulp-util');
-var watch = require('gulp-watch');
+var beeper = require('beeper');
+var c = require('ansi-colors');
 
 var sass = require('gulp-sass');
 var notify = require('gulp-notify');
-var cleanCSS = require('gulp-clean-css');
-
-var imageop = require('gulp-image-optimization');
 
 var browserSync = require('browser-sync');
 
@@ -15,7 +12,15 @@ var cp = require('child_process');
 /**
  * Build the Jekyll Site
  */
- gulp.task('jekyll-build', function (done) {
+ gulp.task('js-build', function (done) {
+    return cp.spawn('webpack', ['--watch'], {stdio: 'inherit'})
+    .on('close', done);
+});
+
+/**
+ * Build the Jekyll Site
+ */
+gulp.task('jekyll-build', function (done) {
     browserSync.notify('Building Jekyll');
     return cp.spawn('jekyll', ['build', '--incremental'], {stdio: 'inherit'})
     .on('close', done);
@@ -47,21 +52,11 @@ var sassBuild = function () {
         outputStyle: 'compressed'
     }))
     .on('error', reportError)
-    // .pipe(cleanCSS())
     .pipe(gulp.dest('assets/css'))
 };
 
 // Compile sass
 gulp.task('sass', sassBuild);
-
-// Image optimization
-gulp.task('images', function(cb) {
-    gulp.src('assets/images/**/*.+(png|jpg|gif|jpeg)').pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    })).pipe(gulp.dest('assets/images')).on('end', cb).on('error', cb);
-});
 
 // Error report sass
 var reportError = function (error) {
@@ -73,11 +68,11 @@ var reportError = function (error) {
         sound: 'Sosumi' // See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
     }).write(error);
 
-    gutil.beep(); // Beep 'sosumi' again
+    beeper(); // Beep 'sosumi' again
 
     // Pretty error reporting
     var report = '';
-    var chalk = gutil.colors.white.bgRed;
+    var chalk = c.white.bgRed;
 
     report += chalk('TASK:') + ' [' + error.plugin + ']\n';
     report += chalk('PROB:') + ' ' + error.message + '\n';
@@ -92,10 +87,14 @@ var reportError = function (error) {
 gulp.task('watch', function() {
   // Watch .scss files
   gulp.watch('assets/sass/**/*.scss', ['sass']);
+  // Watch .scss files on node modules
+  gulp.watch('node_modules/vitis-frontend/sass/**/*.scss', ['sass']);
+  // Watch .js files
+  gulp.watch('assets/js/**/*.js', ['jekyll-rebuild']);
   // Watch .css files
   gulp.watch('assets/css/**/*.css', ['jekyll-rebuild']);
   // Watch image files
-  gulp.watch(['assets/images/**/*.png', 'assets/images/**/*.jpg', 'assets/images/**/*.gif', 'assets/images/**/*.jpeg'], ['images'], ['jekyll-rebuild']);
+  gulp.watch(['assets/images/**/*.**'], ['jekyll-rebuild']);
   // Watch .html files and posts
   gulp.watch(['index.html', '*/*.html', '*.md', '_posts/*'], ['jekyll-rebuild']);
 });

@@ -1,47 +1,37 @@
-$base-font-size:     	15px;
-$base-line-height:   	20px;
+// Font sizing
+$base-font-size:     				15px;
+$base-line-height:   				20px;
 
-$base-radius:        	3px;
+// Base units
+$base-radius:                       3px;
+$base-spacing-unit:  				20px;
 
-$base-transition:   	0.333333333s;
+// Banner
+$banner-padding:                    100px;
 
-$base-spacing-unit:  	20px;
+// Header
+$header-bar-height:     			32px;
+$header-height:         			64px;
 
-$base-sidebar-width: 	200px;
-$base-sidebar-spacing: 	90px;
+// Menu
+$main-menu-item-padding:			16px; 
 
-$header-padding:	 	20px;
+// Callout
+$callout-padding: 					($base-spacing-unit + 10);
+
+// Button
+$btn-radius:                        $base-radius;
 
 // To be changed once there is a new logo
-$logo-height:		 			44px;
+$logo-height:		 				48px;
 
-$main-menu-toggle-width:    	25px;
-$main-menu-toggle-bar-height:   3px;
-$main-menu-toggle-bar-spacing:	5px;
-$main-menu-toggle-bar-radius:   0;
-$main-menu-toggle-bar-time:   	0.25s;
-
-$main-menu-toggle-bar-open-postion:8px;
-
-
-// Use maths to get the size of logo and menu toggle
-$main-menu-toggle-height:(
-	($main-menu-toggle-bar-height * 3) + ($main-menu-toggle-bar-spacing * 4)
-	);
-
-$main-menu-toggle-postion:(
-	($logo-height + ($header-padding * 2)) / 2 - ($main-menu-toggle-height / 2)
-	);
-
-
-$respond-settings: 	 true;
-
-$site-width:         1170px;
-$site-width-medium:  1024px;
-$site-width-small:   720px;
-
-
-$font-settings:		false;
+// Fonts
+$font-size-h1:                      ($base-font-size * 2.6);
+$font-size-h2:                      ($base-font-size * 1.5);
+$font-size-h3:                      ($base-font-size * 1.4);
+$font-size-h4:                      ($base-font-size * 1.4);
+$font-size-h5:                      ($base-font-size * 1.2);
+$font-size-h6:                      ($base-font-size * 0.9);
 
 $font-primary: 		'Roboto';
 $font-secondary: 	'IBM Plex';
