@@ -11,19 +11,19 @@ $banner-padding:                    100px;
 
 // Header
 $header-bar-height:     			32px;
-$header-height:         			64px;
+$header-height:         			75px;
+
+// To be changed once there is a new logo
+$logo-height:		 				30px;
 
 // Menu
-$main-menu-item-padding:			16px; 
+$main-menu-item-padding:			20px; 
 
 // Callout
 $callout-padding: 					($base-spacing-unit + 10);
 
 // Button
 $btn-radius:                        $base-radius;
-
-// To be changed once there is a new logo
-$logo-height:		 				48px;
 
 // Fonts
 $font-size-h1:                      ($base-font-size * 2.6);

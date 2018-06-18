@@ -1,27 +1,12 @@
-$header-height: 64px;
-
 .page-head{
 	position:relative;
-    height:$header-height;
-    left:0;
-    right:0;
-    background-color:$color-grey-dark;
     z-index:20;
     box-shadow:0 1px 4px rgba(0,0,0,0.5);
 
     &__inner{
-        height:$header-height;
-        max-width:$site-width;
-        margin:0 auto;
-        @include clearfix;
 
         .-inset &{
             border-bottom:1px solid $color-header-border;
         }
     }
-}
-
-.page-head__logo{
-    margin:17px 0 0 0;
-    height:30px;
 }
