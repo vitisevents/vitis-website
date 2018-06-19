@@ -1,0 +1,45 @@
+$list: php_confrence php_london gophercon applied_ai_conference;
+
+.panel{
+    @include border-radius($base-radius);
+    overflow:hidden;
+    z-index:1;
+    background-color:$color-brand-primary;
+
+    @each $panel-item in $list {
+        &.#{$panel-item}{
+            background-image:url(../images/events/#{$panel-item}.png);
+            background-repeat:no-repeat;
+            background-size:50% auto;
+            background-position:center center;
+        }
+    }
+
+    &:after{
+        display:block;
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        height:100%;
+        width:100%;
+        content:'';
+        z-index:-1;
+        opacity:0;
+        background-color:$color-brand-primary;
+        @include transition(opacity, $base-transition);
+    }
+
+    &__title{
+        opacity:0;
+        font-size:20px;
+        color:$color-white;
+    }
+
+    &:hover &__title,
+    &:hover:after{
+        opacity:1;
+        font-size:20px;
+	}
+}

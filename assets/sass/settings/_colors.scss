@@ -1,4 +1,4 @@
-$color-brand-primary:                   #EDC951;
+$color-brand-primary:                   #EE387D;
 $color-brand-secondary:                 #CC333F; // Red
 $color-brand-tertiary:                  #EB6841; // Orange
 $color-brand-quarternary:               #00A0B0; // Green-blue
@@ -10,9 +10,10 @@ $color-grey-light:						#F4F4F4;
 $color-grey-medium:						#4E4E4E;
 $color-grey-dark:                       #2a2a2a;
 
-$color-page-text:                         #111111;
-$color-page-link:                         $color-page-text;
-$color-page-heading:                      #373737;
+$color-page-text:                         #4E4E4E;
+$color-page-link:                         $color-brand-primary;
+$color-page-heading:                      $color-page-text;
+$color-page-background:                   #FFFFFF;
 
 // Header
 $color-header-background:                 $color-grey-dark;

@@ -17,6 +17,7 @@
 @import "./node_modules/inuit-reset/generic.reset";
 @import "./node_modules/vitis-frontend/sass/generic/ui";
 @import "./node_modules/vitis-frontend/sass/generic/shared";
+@import "generic/shared";
 
 @import "./node_modules/vitis-frontend/sass/elements/page";
 @import "./node_modules/vitis-frontend/sass/elements/headings";
@@ -24,6 +25,8 @@
 @import "./node_modules/vitis-frontend/sass/elements/tables";
 @import "./node_modules/vitis-frontend/sass/elements/icons";
 @import "./node_modules/vitis-frontend/sass/elements/panels";
+@import "elements/headings";
+@import "elements/panels";
 
 @import "./node_modules/vitis-frontend/sass/objects/wrappers";
 @import "./node_modules/vitis-frontend/sass/objects/forms";
