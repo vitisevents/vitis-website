@@ -1,3 +1,18 @@
-<footer id="footer-container">
-	
+<footer id="footer-container" class="page-footer">
+    <div class="grid">
+        <div class="grid__item u-1/3@md u-1/3@sm">
+            <p>&copy; Vitis Events Ltd. Registered company 09693545</p>
+        </div>
+        <div class="grid__item u-1/3@md u-1/3@sm">
+            <a href="/" class="page-footer__logo">
+                <img src="/assets/images/vitis-events.svg" alt="Vitis Events">
+            </a>
+        </div>
+        <div class="grid__item u-1/3@md u-1/3@sm">
+            <ul class="main-menu">
+                {% assign pages_list = site.pages %}
+                {% assign group = 'navigation' %}
+                {% include pages_list %}
+            </ul>
+        </div>
 </footer>
