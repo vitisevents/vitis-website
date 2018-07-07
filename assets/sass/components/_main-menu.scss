@@ -10,4 +10,16 @@
             }
         }
     }
+
+    &__link{
+
+		&:hover,
+		&.-is-active{
+			text-decoration:none;
+
+			@include respond(large){
+				color:$color-brand-primary;
+			}
+		}
+	}
 }
