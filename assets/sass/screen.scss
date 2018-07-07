@@ -34,6 +34,7 @@
 @import "./node_modules/vitis-frontend/sass/objects/layout";
 @import "./node_modules/vitis-frontend/sass/objects/sidebar";
 @import "./node_modules/vitis-frontend/sass/objects/banners";
+@import "objects/layout";
 
 @import "./node_modules/vitis-frontend/sass/components/page-header";
 @import "./node_modules/vitis-frontend/sass/components/page-banner";
@@ -46,7 +47,9 @@
 @import "./node_modules/vitis-frontend/sass/components/mobile-nav";
 @import "components/page-header";
 @import "components/page-banner";
+@import "components/page-footer";
 @import "components/main-menu";
+@import "components/events";
 
 @import "./node_modules/vitis-frontend/sass/trumps/utilities";
 @import "./node_modules/vitis-frontend/sass/trumps/widths";
