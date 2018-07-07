@@ -1,0 +1,15 @@
+.events{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:$base-spacing-unit;
+
+    img{
+        max-width:70%;
+        margin:0 auto;
+    }
+
+    h3{
+        margin-top:0;
+    }
+}
