@@ -1,13 +1,16 @@
 .banner{
 	position:relative;
+	min-height:auto;
 	padding:$banner-padding 0;
+	padding-top:$banner-padding + $header-height;
 	background-image:url(/assets/images/banner.jpg);
 	background-size:cover;
 	background-color:rgb(40,55,105);
 	background-position:center center;
 
 	.home &{
-		padding-top:$banner-padding + $header-height;
+		padding:200px 0;
+		padding-top:200px + $header-height;
 	}
 
 	@include respond(mobile-only){
