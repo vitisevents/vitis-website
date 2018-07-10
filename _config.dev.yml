@@ -3,4 +3,4 @@ exclude: [node_modules]
 keep_files: [assets/css]
 name: Vitis Events Ltd 
 description: 
-url: http://www.vitisevents.com
+url:
