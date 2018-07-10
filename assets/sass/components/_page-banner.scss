@@ -6,25 +6,34 @@
 	background-color:rgb(40,55,105);
 
 	.home &{
-		padding:200px 0;
-		padding-top:200px + $header-height;
+		padding:100px 0;
+		padding-top:100px + $header-height;
 		background-image:url(/assets/images/banner.jpg);
 		background-size:cover;
 		background-color:rgb(40,55,105);
 		background-position:center center;
+
+		@include respond(medium){
+			padding:200px 0;
+			padding-top:200px + $header-height;
+		}
 	}
 
 	@include respond(mobile-only){
-		padding-top:40px;
+		padding-top:40px + $header-height;;
 		padding-bottom:40px;
 	}
 
 	h1,
 	h2{
-		@include font-size(50px);
+		@include font-size(30px);
 		@include font-family(secondary);
 		@include font-weight(bold);
 		color:$color-white;
+
+		@include respond(medium){
+			@include font-size(50px);
+		}
 	}
 
 	p{

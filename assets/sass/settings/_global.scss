@@ -14,7 +14,11 @@ $header-bar-height:     			32px;
 $header-height:         			75px;
 
 // To be changed once there is a new logo
-$logo-height:		 				30px;
+$logo-height:		 				20px;
+$logo-height-large:		 		    30px;
+
+$logo-position:						($header-height / 2) - ($logo-height / 2);
+$logo-position-large:				($header-height / 2) - ($logo-height-large / 2);
 
 // Menu
 $main-menu-item-padding:			20px; 

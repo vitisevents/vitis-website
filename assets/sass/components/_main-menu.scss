@@ -15,10 +15,13 @@
 
 		&:hover,
 		&.-is-active{
-			text-decoration:none;
+            color:$color-white;
+            text-decoration:none;
+            background:$color-brand-primary;
 
 			@include respond(large){
-				color:$color-brand-primary;
+                color:$color-brand-primary;
+                background:none;
 			}
 		}
 	}

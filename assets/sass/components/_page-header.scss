@@ -9,4 +9,14 @@
             border-bottom:none;
         }
     }
+
+    &__logo{
+        margin-top:$logo-position;
+        height:$logo-height;
+
+        @include respond(medium){
+            margin-top:$logo-position-large;
+            height:$logo-height-large;
+        }
+    }
 }

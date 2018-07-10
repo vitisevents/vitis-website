@@ -4,6 +4,7 @@ $list: php_confrence php_london gophercon applied_ai_conference;
     @include border-radius($base-radius);
     overflow:hidden;
     z-index:1;
+    height:200px;
     background-color:$color-grey;
 
     @each $panel-item in $list {
