@@ -3,4 +3,19 @@
     &.-primary{
         background-color:$color-brand-primary;
     }
+
+    &.-map{
+        @include aspect-ratio(16, 3);
+        background-image:url('../images/map.png');
+        background-size:300%;
+        background-position:center center;
+
+        @include respond(medium){
+            background-size:200%;
+        }
+
+        @include respond(large){
+            background-size:cover;
+        }
+    }
 }
