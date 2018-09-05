@@ -270,6 +270,18 @@ h1,h2,h3,h4,h5,h6
     position: relative;
 }
 
+#header-main-menu h1 {
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 40px;
+    color: #615D6E;
+    text-transform: uppercase;
+    letter-spacing: 0.95cm;
+    padding-top: 40px;
+}
+
 img.menu-logo
 {    
     width: 100px;
@@ -350,8 +362,6 @@ img.menu-logo
     background-color: #ffffff;
     color: #524e5e;
 }
-
-
 
 /* ===================================
     4. Service Section
@@ -587,7 +597,7 @@ h2.big-title
     height: 10px;
     background-color: #f4eaed;
     display: inline-block;
-    vertical-align: 125px;
+    vertical-align: 85px;
 }
 
 .process-holder  .process:last-child
