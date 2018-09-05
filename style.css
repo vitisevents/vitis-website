@@ -385,7 +385,7 @@ h2.big-title
     padding-bottom: 30px;
 }
 
-#confs .box-wrapper
+.confs.box-wrapper
 {
     background-color: #5f5a6d;    
     background-image: url(images/section_square.png);
@@ -393,7 +393,7 @@ h2.big-title
     background-position: left center;
 }
 
-#confs .box-wrapper:nth-child(2) {
+.confs.box-wrapper:nth-child(2) {
     background-color: #fff;
     color: #5f5a6d;
 }
@@ -1101,6 +1101,11 @@ img.support-img
     11. Contact Section
 ====================================== */
 
+
+#contact p, #contact h2
+{
+    color: #514d5d;
+}
 
 .menu-wrapper.section-contact
 {

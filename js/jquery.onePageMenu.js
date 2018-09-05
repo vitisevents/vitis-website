@@ -5,7 +5,7 @@ jQuery(window).on('scroll resize', function () {
     jQuery('.section').each(function () {
         var element = jQuery(this).attr('id');
         if (jQuery('#' + element).is('*')) {
-            if (jQuery(window).scrollTop() >= jQuery('#' + element).offset().top - 90)
+            if (jQuery(window).scrollTop() >= jQuery('#' + element).offset().top - 170)
             {
                 currentSection = element;
             }
